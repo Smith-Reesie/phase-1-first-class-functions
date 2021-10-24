@@ -1,23 +1,13 @@
-function receivesAFunction(callback) {
-   return callback()
-    
+function receivesAFunction(cb){
+    return cb(console.log('hi'))
 }
-
-function returnsANamedFunction() {
-    return function felix(){
-
-    }
+function returnsANamedFunction(){
+    return function receivesAFunction(){}
 }
 
 function returnsAnAnonymousFunction() {
-    return function() {
-
-    }
+    return () => {}
 }
-
-
-
-
 
 
 
